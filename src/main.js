@@ -1,10 +1,9 @@
-import './assets/main.css'
-import 'font-awesome/css/font-awesome.min.css'
 import { createApp } from 'vue'
 import App from './App.vue'
 import axios from 'axios'
 import router from './router/index'
 import store from './store/index'
+import '@/styles/index.scss'
 const app = createApp(App)
 
 axios.defaults.baseURL='http://localhost:8080'

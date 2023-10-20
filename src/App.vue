@@ -1,11 +1,10 @@
 <script setup>
-let a = 1;
-let b = 4;
-let c = 4;
-const d = 343;
-let s = 43;
-let sdji = fne;
+let s = $ref(54);
 </script>
-<template></template>
+<template>
+  <div>{{ s }}</div>
+  <router-link to="/test">zheshishenme </router-link>
+  <router-view></router-view>
+</template>
 
 <style scoped></style>
