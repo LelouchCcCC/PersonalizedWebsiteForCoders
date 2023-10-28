@@ -2,30 +2,71 @@
   <!-- <button @click="handleClick">click</button>
   <h1>{{ res }}</h1> -->
   <!-- <textme /> -->
-  <div class="left-bar">
-    <div class="main">
-      <div class="main-content">
-        <img class="home-img" src="home1.png" alt="" />
-        <h2 style="color: limegreen">Yuhan's Website</h2>
+  <div id="whole">
+    <navBar></navBar>
+    <div class="left-bar">
+      <div class="main">
+        <div class="main-content">
+          <img class="home-img" src="home1.png" alt="" />
+          <h2 style="color: limegreen">Yuhan's Website</h2>
+        </div>
+        <hr class="centered-hr" color="#987cb9" SIZE="3" />
       </div>
-      <hr class="centered-hr" width="80%" color="#987cb9" SIZE="3" />
-    </div>
-    <div class="content">
-      <div class="name">
-        <h2 @mouseover="nameVisible = true" @mouseleave="nameVisible = false">Yuhan Zhang</h2>
-        <div>
-          <div v-show="nameVisible" class="name-2">张聿涵</div>
+      <div class="content">
+        <div class="name">
+          <h2 @mouseover="nameVisible = true" @mouseleave="nameVisible = false">Yuhan Zhang</h2>
+          <div>
+            <div v-show="nameVisible" class="name-2">张聿涵</div>
+          </div>
+        </div>
+        <hr class="centered-hr2" width="80%" color="#987cb9" SIZE="3" />
+        <ul>
+          <li style="margin-top: 15px"><p style="text-decoration: underline">Mar 8th 2001</p></li>
+          <li style="margin-top: 15px"><p style="text-decoration: underline">Northeastern University</p></li>
+          <li style="margin-top: 15px"><p style="text-decoration: underline">(617)936-9736</p></li>
+          <li style="margin-top: 15px"><p style="text-decoration: underline">+86 18951613615</p></li>
+        </ul>
+        <div class="github-link">
+          <a href="http://www.github.com/LelouchCcCC">
+            <el-card style="text-align: center">
+              <div>
+                <img style="width: 30px; height: 30px; display: inline; margin-right: 10px" src="github-mark.png" alt="" />
+                <p style="display: inline-block; font-size: 30px">GitHub</p>
+              </div>
+            </el-card>
+          </a>
+        </div>
+        <div class="github-link">
+          <a href="https://www.linkedin.com/in/yuhan-zhang-05896a286/">
+            <el-card style="text-align: center">
+              <div>
+                <img style="height: 30px; display: inline; margin-right: 10px" src="LinkedIn-Blue-26@2x.png" alt="" />
+                <!-- <p style="display: inline-block; font-size: 30px">LinkedIn</p> -->
+              </div>
+            </el-card>
+          </a>
+        </div>
+        <div class="github-link">
+          <a href="https://leetcode.cn/u/elastic-kovvalevskismn/">
+            <el-card style="text-align: center">
+              <div>
+                <img style="height: 30px; display: inline; margin-right: 10px" src="avatar_1517967610.png" alt="" />
+
+                <p style="display: inline-block; font-size: 32px">LeetCode</p>
+              </div>
+            </el-card>
+          </a>
         </div>
       </div>
+      <div class="pic"></div>
+      <!-- <div class="seft"><p>ndjvakldnvldnvjnedvdnehidkjnvfhjdedibnebhvmhbnkdbvmjkdsrhgfujdhnjruihfugdhu</p></div> -->
     </div>
-    <div class="pic"></div>
-    <!-- <div class="seft"><p>ndjvakldnvldnvjnedvdnehidkjnvfhjdedibnebhvmhbnkdbvmjkdsrhgfujdhnjruihfugdhu</p></div> -->
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
-
+import navBar from './nav-bar.vue';
 let nameVisible = ref(false);
 // import { ElIcon } from 'element-plus';
 // import axios from 'axios';
@@ -40,6 +81,11 @@ let nameVisible = ref(false);
 </script>
 
 <style>
+#whole {
+  width: 100%;
+  height: 100%;
+  background: url('cool-background.png');
+}
 .main-content {
   height: 80px;
   display: flex;
@@ -53,8 +99,9 @@ let nameVisible = ref(false);
 }
 .left-bar {
   width: 300px;
-  background-color: bisque;
+  /* background-color: bisque; */
   height: 100%;
+  background: rgba(40, 142, 120, 0.3); /* 不透明度为 30% 的绿色背景 */
 }
 .main {
   border-top: 20px;
@@ -98,5 +145,12 @@ let nameVisible = ref(false);
   transform: translateX(-50%);
   /* transform: translateY(-50%); */
   /* background-color: #fff; */
+}
+
+.centered-hr2 {
+  width: 80%;
+  margin: 0 auto;
+  color: #987cb9;
+  size: 3;
 }
 </style>
