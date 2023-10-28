@@ -4,7 +4,8 @@
   <!-- <textme /> -->
   <div id="whole">
     <navBar></navBar>
-    <div class="left-bar">
+    <content1></content1>
+    <!-- <div class="left-bar">
       <div class="main">
         <div class="main-content">
           <img class="home-img" src="home1.png" alt="" />
@@ -41,7 +42,6 @@
             <el-card style="text-align: center">
               <div>
                 <img style="height: 30px; display: inline; margin-right: 10px" src="LinkedIn-Blue-26@2x.png" alt="" />
-                <!-- <p style="display: inline-block; font-size: 30px">LinkedIn</p> -->
               </div>
             </el-card>
           </a>
@@ -59,15 +59,15 @@
         </div>
       </div>
       <div class="pic"></div>
-      <!-- <div class="seft"><p>ndjvakldnvldnvjnedvdnehidkjnvfhjdedibnebhvmhbnkdbvmjkdsrhgfujdhnjruihfugdhu</p></div> -->
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+// import { ref } from 'vue';
 import navBar from './nav-bar.vue';
-let nameVisible = ref(false);
+import content1 from './home/content-1.vue';
+// let nameVisible = ref(false);
 // import { ElIcon } from 'element-plus';
 // import axios from 'axios';
 // import textme from '@/components/common/textme.vue';

@@ -10,6 +10,10 @@ const routes = [
     component: ()=>import('@/views/test.vue')
   },
   {
+    path:'/ed',
+    component: ()=>import('@/views/ed.vue')
+  },
+  {
     path: '/:pathMatch(.*)*',
     component: ()=>import('@/views/error-page/404.vue')
   }

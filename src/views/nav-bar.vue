@@ -1,24 +1,45 @@
+<script setup>
+import direct from '@/components/common/direct.vue';
+</script>
 <template>
   <div class="nav">
-    <el-button>Home</el-button>
-    <el-button>Resume</el-button>
-    <el-button>Projects</el-button>
-    <el-button>Thinking</el-button>
-    <div class="right-icon"><img style="height: 30px; display: inline; margin-right: 10px" src="10001.svg" alt="" /></div>
-    <div class="right-icon"><img style="width: 30px; height: 30px; display: inline; margin-right: 10px" src="github-mark.png" alt="" /></div>
-    <div class="right-icon"><img style="height: 30px; display: inline; margin-right: 10px" src="avatar_1517967610.png" alt="" /></div>
+    <direct style="min-width: 160px; margin-left: 10px"><router-link to="test">MyHome</router-link></direct>
+    <direct style="min-width: 160px; margin-left: 10px"><router-link to="test">Resume</router-link></direct>
+    <direct style="min-width: 160px; margin-left: 10px"><router-link to="test">Projects</router-link></direct>
+    <direct style="min-width: 160px; margin-left: 10px"><router-link to="test">Thinking</router-link></direct>
+    <div class="right-icon">
+      <a href="https://www.linkedin.com/in/yuhan-zhang-05896a286/"><img style="height: 100%; display: inline; margin-right: 20px" src="10001.svg" alt="" /></a>
+    </div>
+    <div class="right-icon">
+      <a href="https://www.linkedin.com/in/yuhan-zhang-05896a286/"><img style="height: 100%; display: inline; margin-right: 20px" src="github-mark.png" alt="" /></a>
+    </div>
+    <div class="right-icon">
+      <a href="https://www.linkedin.com/in/yuhan-zhang-05896a286/"><img style="padding-top: 3px; height: 110%; display: inline; margin-right: 20px" src="avatar_1517967610.png" alt="" /></a>
+    </div>
   </div>
 </template>
 
 <style>
 .nav {
   width: 100%;
-  height: 50px;
-  background-color: #fff;
-  margin-top: 10px;
+  height: 63px;
+  padding-top: 10px;
 }
 .right-icon {
   float: right;
-  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.top-item {
+  /* margin: 0 10px; */
+  height: 40px;
+  float: left;
+  border-radius: 25%;
+  border: 1px solid black;
+  font-size: 30px;
+  color: #606266;
+  padding: 0px 5px;
 }
 </style>
