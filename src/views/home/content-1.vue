@@ -91,9 +91,66 @@ let changePage4 = () => {
   </transition>
   <transition v-show="page2" class="con_wrap" name="page-change">
     <div>
-      <div class="tit_wrap">
-        <h1 style="font-weight: bold">Education</h1>
-        <div class="scissors" style="border-top: 1px dashed orange"></div>
+      <div class="con_wrap">
+        <div class="tit_wrap">
+          <h1 style="font-weight: bold">Skill Sets</h1>
+          <div class="scissors" style="border-top: 1px dashed orange"></div>
+          <!-- <h2>长年累月后,精进又向前。唯有勤学练,擅长最优先。</h2> -->
+        </div>
+        <div class="skill_con">
+          <div class="canvas_wrap">
+            <div class="canvas_con">
+              <div class="txt">Language:</div>
+              <div class="text_con">
+                <el-button type="success" round>Python</el-button>
+                <el-button type="success" round>Java</el-button>
+                <el-button type="success" round>Vue</el-button>
+                <el-button type="warning" round>HTML</el-button>
+                <el-button type="warning" round>CSS</el-button>
+                <el-button type="info" round>JavaScript</el-button>
+              </div>
+            </div>
+            <div class="canvas_con">
+              <div class="txt">Frameworks:</div>
+              <div class="text_con">
+                <el-button type="success" round>Django</el-button>
+                <el-button type="success" round>Flask</el-button>
+                <el-button type="success" round>Vue/cli</el-button>
+                <el-button type="warning" round>Maven</el-button>
+                <el-button type="warning" round>Spring Boot</el-button>
+                <el-button type="info" round>Spring Cloud</el-button>
+                <el-button type="info" round>Redit</el-button>
+              </div>
+            </div>
+            <div class="canvas_con">
+              <div class="txt">Others:</div>
+              <div class="text_con">
+                <el-button type="success" round>Node</el-button>
+                <el-button type="success" round>MySQL</el-button>
+                <el-button type="warning" round>ES6</el-button>
+                <el-button type="warning" round>XML</el-button>
+                <el-button type="warning" round>MyBatis</el-button>
+                <el-button type="warning" round>RESTful API</el-button>
+                <el-button type="info" round>Linux</el-button>
+              </div>
+            </div>
+          </div>
+          <div class="text_wrap">
+            <p>
+              1. Proficient in using the Java language, capable of skillfully applying Object-Oriented Programming (OOP) concepts to design project structures. Well-versed in setting up Spring Boot
+              projects with Maven repository management.
+            </p>
+            <p>2. Excellent in Python language and backend development for projects based on Flask and Django.</p>
+            <p>3. Proficient in frontend interface development and design, capable of using ES6 syntax and Vue 3 technology to complete frontend projects.</p>
+            <p>4. Skilled in database-related knowledge, using MySQL, MyBatis, and MybatisPlus to provide backend applications with database CRUD operations.</p>
+            <p>5. Familiar with server deployment operations on Linux servers, capable of completing project deployments.</p>
+            <p>6. Studying knowledge related to Spring Cloud and Redis caching, and learning in the context of large-scale Java projects.</p>
+            <p>7. Currently learning to develop a backend project using both Python and Java, aiming to create a speech model system based on VITS (Variational Inference Text-to-Speech).</p>
+          </div>
+        </div>
+      </div>
+      <div class="down_arrow">
+        <a class="scroll"><span></span></a>
       </div>
     </div>
   </transition>
@@ -167,5 +224,19 @@ let changePage4 = () => {
 .page-change-enter-to,
 .page-change-leave-from {
   opacity: 1;
+}
+.txt {
+  padding-bottom: 15px;
+  font-size: 25px;
+  float: left;
+}
+.canvas_con {
+  margin-bottom: 40px;
+}
+.text_wrap {
+  float: left;
+}
+.text_wrap p {
+  margin-top: 13px;
 }
 </style>
