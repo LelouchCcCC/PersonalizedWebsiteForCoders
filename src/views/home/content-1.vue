@@ -149,8 +149,69 @@ let changePage4 = () => {
           </div>
         </div>
       </div>
-      <div class="down_arrow">
-        <a class="scroll"><span></span></a>
+    </div>
+  </transition>
+  <transition v-show="page3" class="con_wrap" name="page-change">
+    <div class="con_wrap">
+      <div class="tit_wrap">
+        <h1 style="font-weight: bold">Education</h1>
+        <div class="scissors" style="border-top: 1px dashed orange"></div>
+        <!-- <h2>长年累月后,精进又向前。唯有勤学练,擅长最优先。</h2> -->
+      </div>
+      <div class="work_con">
+        <div class="programe">
+          <div style="float: left" class="ll">
+            <div class="work_icon">
+              <img src="@/img/neu.jpeg" alt="" />
+            </div>
+            <div class="work_time">
+              <dashedThin>
+                <div class="school">
+                  Northeastern <br />
+                  Universiy
+                </div>
+              </dashedThin>
+            </div>
+          </div>
+          <div class="work_text">
+            <div class="triangle-left"></div>
+            <div class="exCon">
+              <h4>Sep 2023 - May 2025 Expected</h4>
+              <div style="height: 5px"></div>
+              <p>Related courses：</p>
+              <p>大学四年时间完成了所有的学业，并参与了很多项目研发工作，配合老师和同学攻关了很多难题。</p>
+              <p>1.掌握了办公五剑客，Word，PPT，excel，ps，viso。</p>
+              <p>2.掌握了C#和java的前后端开发，数据库基本应用。</p>
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="programe">
+          <div style="float: left" class="ll">
+            <div class="work_icon">
+              <img src="@/img/hqu.jpeg" alt="" />
+            </div>
+            <div class="work_time">
+              <dashedThin>
+                <div class="school">
+                  HuaQiao <br />
+                  Universiy
+                </div>
+              </dashedThin>
+            </div>
+          </div>
+          <div class="work_text">
+            <div class="triangle-left"></div>
+            <div class="exCon">
+              <h4>Sep 2019 - April 2023</h4>
+              <div style="height: 5px"></div>
+              <p>学习技能：</p>
+              <p>参加了一年的JAVA培训班，跟着老师一起做了多个项目。积累了很多经验，有了很多经历。</p>
+              <p>1.掌握了springboot框架下的api开发，并开发了自己的一套数据接口。</p>
+              <p>2.掌握了ssm框架下的前后端开发，并开发了自己的博客。</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </transition>
@@ -238,5 +299,54 @@ let changePage4 = () => {
 }
 .text_wrap p {
   margin-top: 13px;
+}
+
+.work_icon {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  /* 注意：为了使上述代码工作，.ll 必须有一个设定的宽度 */
+}
+
+.ll {
+  width: 140px;
+  text-align: center;
+  height: 100%;
+}
+.exCon {
+  margin-top: 10px;
+}
+
+.work_time {
+  width: 100%;
+  text-align: center;
+}
+.clear {
+  clear: both;
+}
+
+.work_text {
+  height: 160px;
+}
+.triangle-left {
+  width: 3px;
+  float: left;
+  height: 140%;
+  margin-left: 80px;
+  margin-right: 80px;
+  background: #e7e7e7; /*背景色为浅灰色*/
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.school {
+  font-size: 14px;
 }
 </style>
