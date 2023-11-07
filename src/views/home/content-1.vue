@@ -174,14 +174,14 @@ let changePage4 = () => {
             </div>
           </div>
           <div class="work_text">
-            <div class="triangle-left"></div>
             <div class="exCon">
-              <h4>Sep 2023 - May 2025 Expected</h4>
-              <div style="height: 5px"></div>
-              <p>Related courses：</p>
-              <p>大学四年时间完成了所有的学业，并参与了很多项目研发工作，配合老师和同学攻关了很多难题。</p>
-              <p>1.掌握了办公五剑客，Word，PPT，excel，ps，viso。</p>
-              <p>2.掌握了C#和java的前后端开发，数据库基本应用。</p>
+              <p><strong>Sep 2023 - May 2025 Expected</strong></p>
+              <p>Related courses：Object-Oriented Programming Using Java, Algorithm and Data Structure</p>
+              <ul>
+                <li>Developed the personal website using Spring Boot, Vue, MySQL, MybatisPlus, Maven, Git <a href=""></a></li>
+                <li>Studied the concepts of object-oriented, learned the the algorithm with multiple thoughts</li>
+                <li>Addressed over 400 leetcode problems till now</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -201,14 +201,15 @@ let changePage4 = () => {
             </div>
           </div>
           <div class="work_text">
-            <div class="triangle-left"></div>
             <div class="exCon">
-              <h4>Sep 2019 - April 2023</h4>
-              <div style="height: 5px"></div>
-              <p>学习技能：</p>
-              <p>参加了一年的JAVA培训班，跟着老师一起做了多个项目。积累了很多经验，有了很多经历。</p>
-              <p>1.掌握了springboot框架下的api开发，并开发了自己的一套数据接口。</p>
-              <p>2.掌握了ssm框架下的前后端开发，并开发了自己的博客。</p>
+              <p><strong>Sep 2019 - June 2023</strong></p>
+              <p>Related courses：Machine Learning, Further Mathematics, Advanced Algebra</p>
+              <ul>
+                <li>Build a web-based system that trace the relevance of the infected using k-means</li>
+                <li>Participated in a group that addressing dish identification using Yolov5</li>
+                <li>Learned the data analysis using Python, pandas and numpy</li>
+                <li>Pridicted stock price with 2GB data using Python and LSTM model</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -316,21 +317,38 @@ let changePage4 = () => {
   width: 140px;
   text-align: center;
   height: 100%;
+  margin-right: 50px;
 }
 .exCon {
-  margin-top: 10px;
+  width: 1200px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+.exCon p,
+.exCon ul {
+  margin-bottom: 15px;
+}
+.exCon ul {
+  padding-left: 20px;
+}
+
+.exCon li {
+  margin-bottom: 5px;
 }
 
 .work_time {
   width: 100%;
   text-align: center;
+  margin-bottom: 20px;
 }
 .clear {
   clear: both;
 }
 
 .work_text {
-  height: 160px;
+  height: 100%;
 }
 .triangle-left {
   width: 3px;

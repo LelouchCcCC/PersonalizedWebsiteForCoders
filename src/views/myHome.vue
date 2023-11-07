@@ -4,7 +4,8 @@
   <!-- <textme /> -->
   <div id="whole">
     <navBar></navBar>
-    <content1></content1>
+    <router-view></router-view>
+    <!-- <content1></content1> -->
     <!-- <div class="left-bar">
       <div class="main">
         <div class="main-content">
@@ -66,7 +67,7 @@
 <script setup>
 // import { ref } from 'vue';
 import navBar from './nav-bar.vue';
-import content1 from './home/content-1.vue';
+// import content1 from './home/content-1.vue';
 // let nameVisible = ref(false);
 // import { ElIcon } from 'element-plus';
 // import axios from 'axios';
@@ -84,7 +85,8 @@ import content1 from './home/content-1.vue';
 #whole {
   width: 100%;
   height: 100%;
-  background: url('cool-background.png');
+  /* background: url('cool-background.png'); */
+  background: linear-gradient(45deg, #34495e, #67809f);
 }
 .main-content {
   height: 80px;
