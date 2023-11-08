@@ -86,7 +86,8 @@ import navBar from './nav-bar.vue';
   width: 100%;
   height: 100%;
   /* background: url('cool-background.png'); */
-  background: linear-gradient(45deg, #34495e, #67809f);
+  /* background: linear-gradient(45deg, #34495e, #67809f); */
+  background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
 }
 .main-content {
   height: 80px;
