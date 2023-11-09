@@ -14,7 +14,7 @@ const routes = [
     },
     {
       path:'/thinking',
-      component:()=>import('@/views/thinking/thinking.vue'),
+      component: ()=>import('@/views/thinking/thinking.vue'),
     },
     {
     path:'/project',

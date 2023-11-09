@@ -1,15 +1,25 @@
+<script setup>
+let form = ref({
+  username: '',
+  password: '',
+});
+function zhanshi() {
+  console.log(this.form.username);
+  console.log(this.form.password);
+}
+</script>
 <template>
   <div class="container">
     <div class="login-wrapper">
       <div class="header">Login</div>
       <div class="form-wrapper">
-        <input type="text" name="username" placeholder="username" class="input-item" />
-        <input type="password" name="password" placeholder="password" class="input-item" />
+        <input v-model="form.username" type="text" name="username" placeholder="username" class="input-item" />
+        <input v-model="form.password" type="password" name="password" placeholder="password" class="input-item" />
         <div class="btn2">Login</div>
       </div>
       <div class="msg">
         Don't have account?
-        <a href="#">Sign up</a>
+        <a @click="zhanshi()">Sign up</a>
       </div>
     </div>
   </div>
@@ -57,6 +67,9 @@
   margin-top: 40px;
   background-image: linear-gradient(to right, #a6c1ee, #fbc2eb);
   color: #fff;
+}
+.btn2:hover {
+  cursor: pointer;
 }
 .msg {
   text-align: center;
