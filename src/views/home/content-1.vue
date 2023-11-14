@@ -246,6 +246,7 @@ let changePage4 = () => {
 }
 .round-pic {
   width: 400px;
+  height: auto;
 }
 
 .odd {
