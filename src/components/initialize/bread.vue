@@ -31,10 +31,10 @@ import dashedThin from '@/components/common/dashed-thin.vue';
         >
       </div>
       <div>
-        <direct style="min-width: 160px; margin-left: 10px"><router-link to="information">MyHome</router-link></direct>
-        <direct style="min-width: 160px; margin-left: 10px"><a href="https://github.com/LelouchCcCC">GitHub</a></direct>
-        <direct style="min-width: 160px; margin-left: 10px"><a href="https://www.linkedin.com/in/yuhan-zhang-05896a286/">LinedIn</a></direct>
-        <direct style="min-width: 160px; margin-left: 10px"><a href="https://leetcode.cn/u/elastic-kovvalevskismn/">LeetCode</a></direct>
+        <direct class="lin" style="min-width: 160px; margin-left: 10px"><router-link to="information">MyHome</router-link></direct>
+        <direct class="lin" style="min-width: 160px; margin-left: 10px"><a href="https://github.com/LelouchCcCC">GitHub</a></direct>
+        <direct class="lin" style="min-width: 160px; margin-left: 10px"><a href="https://www.linkedin.com/in/yuhan-zhang-05896a286/">LinedIn</a></direct>
+        <direct class="lin" style="min-width: 160px; margin-left: 10px"><a href="https://leetcode.cn/u/elastic-kovvalevskismn/">LeetCode</a></direct>
       </div>
     </div>
   </div>
@@ -97,5 +97,9 @@ import dashedThin from '@/components/common/dashed-thin.vue';
 }
 .dashed thin {
   width: 100%;
+}
+
+.lin {
+  font-size: 14px;
 }
 </style>

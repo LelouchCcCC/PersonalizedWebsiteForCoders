@@ -271,6 +271,7 @@ let changePage4 = () => {
 .fix-right section img {
   width: 20px;
   margin-bottom: 30px;
+  height: auto;
 }
 
 .page-change-enter-from,
@@ -311,7 +312,6 @@ let changePage4 = () => {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15px;
-  /* 注意：为了使上述代码工作，.ll 必须有一个设定的宽度 */
 }
 
 .ll {
@@ -357,7 +357,7 @@ let changePage4 = () => {
   height: 140%;
   margin-left: 80px;
   margin-right: 80px;
-  background: #e7e7e7; /*背景色为浅灰色*/
+  background: #e7e7e7;
 }
 
 img {
