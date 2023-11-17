@@ -7,6 +7,16 @@ function zhanshi() {
   console.log(this.form.username);
   console.log(this.form.password);
 }
+import { login } from '../../network/axios';
+
+function userLogin(form) {
+  login(form).then((res) => {
+    console.log(res);
+    let token = res.data;
+    console.log(token);
+    localStorage.setItem('token', token);
+  });
+}
 </script>
 <template>
   <div class="container">
@@ -15,7 +25,7 @@ function zhanshi() {
       <div class="form-wrapper">
         <input v-model="form.username" type="text" name="username" placeholder="username" class="input-item" />
         <input v-model="form.password" type="password" name="password" placeholder="password" class="input-item" />
-        <div class="btn2">Login</div>
+        <div class="btn2" @click="userLogin(form)">Login</div>
       </div>
       <div class="msg">
         Don't have account?

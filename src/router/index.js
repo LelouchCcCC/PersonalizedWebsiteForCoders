@@ -28,10 +28,10 @@ const routes = [
   },
   {
     path:'/manage-thinking',
-    component: ()=>import('@/views/thinking/add-thinking.vue'),
-    meta: {
-      requireAuth: true,
-    }
+    component: ()=>import('@/views/user/add-thinking.vue'),
+    // meta: {
+    //   requireAuth: true,
+    // }
   },
   {
     path:'/login',

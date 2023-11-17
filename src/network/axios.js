@@ -3,14 +3,15 @@ import textme from '@/components/common/textme.vue';
 let res = ref(2);
 
 export function handleClick() {
-  axios.get('/usermessage').then((res) => {
-    console.log(res);
-  });
+  return axios.get('/usermessage')
 }
 
 export function handleThinking(){
   console.log("handleThinking now~~~");
-  axios.post('userthinking').then((res)=>{
-    console.log(res);
-  })
+  return axios.post('userthinking')
+}
+
+export function login(data){
+  console.log("login now~~~");
+  return axios.post('login', data)
 }
