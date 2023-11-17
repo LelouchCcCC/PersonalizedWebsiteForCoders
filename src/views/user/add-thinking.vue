@@ -1,3 +1,5 @@
+
+
 <template>
   <div class="co">
     <div class="neirong">
@@ -23,6 +25,7 @@
 </template>
 
 <script>
+import { handleThinking } from '../../network/axios';
 export default {
   data() {
     return {
@@ -38,6 +41,10 @@ export default {
   methods: {
     onSubmit() {
       console.log('submit!');
+      let token = localStorage.getItem('token');
+      handleThinking(token).then((res)=>{
+        console.log("good");
+      })
     },
   },
 };

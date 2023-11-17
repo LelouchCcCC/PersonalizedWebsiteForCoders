@@ -1,4 +1,6 @@
 <script setup>
+import { login } from '../../network/axios';
+
 let form = ref({
   username: '',
   password: '',
@@ -7,7 +9,6 @@ function zhanshi() {
   console.log(this.form.username);
   console.log(this.form.password);
 }
-import { login } from '../../network/axios';
 
 function userLogin(form) {
   login(form).then((res) => {
