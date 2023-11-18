@@ -29,9 +29,9 @@ const routes = [
   {
     path:'/manage-thinking',
     component: ()=>import('@/views/user/add-thinking.vue'),
-    // meta: {
-    //   requireAuth: true,
-    // }
+    meta: {
+      requireAuth: true,
+    }
   },
   {
     path:'/login',
@@ -53,13 +53,13 @@ const router = createRouter({
 
   router.beforeEach((to,from,next)=>{
     if(to.meta.requireAuth){  // 判断该路由是否需要登录权限
-          if(localStorage.getItem("access_token")) {  // 从本地存储localStorage获取当前的token是否存在
+          if(localStorage.getItem("token")) {  // 从本地存储localStorage获取当前的token是否存在
               next()
           }else{
               next('/login') //如果token不存在，就跳到首页
           }
     }else{
-          if(localStorage.getItem("access_token") && to.path == '/login') {  //token存在时候，进去登录页面就自动跳转到首页
+          if(localStorage.getItem("token") && to.path == '/login') {  //token存在时候，进去登录页面就自动跳转到首页
               next('/information')
           }else{
               next()

@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="co">
     <div class="neirong">
@@ -22,6 +20,9 @@
       </el-form>
     </div>
   </div>
+  <div class="logout">
+    <img src="@/img/log-out.png" alt="" />
+  </div>
 </template>
 
 <script>
@@ -42,9 +43,10 @@ export default {
     onSubmit() {
       console.log('submit!');
       let token = localStorage.getItem('token');
-      handleThinking(token).then((res)=>{
-        console.log("good");
-      })
+      handleThinking(token).then((res) => {
+        console.log('good');
+        console.log(res);
+      });
     },
   },
 };
@@ -74,5 +76,17 @@ export default {
 
 .neirong label {
   font-size: 16px;
+}
+
+.logout {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+.logout img {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
 }
 </style>

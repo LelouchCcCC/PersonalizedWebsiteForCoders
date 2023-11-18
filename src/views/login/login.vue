@@ -1,5 +1,6 @@
 <script setup>
 import { login } from '../../network/axios';
+import router from '../../router';
 
 let form = ref({
   username: '',
@@ -11,12 +12,17 @@ function zhanshi() {
 }
 
 function userLogin(form) {
-  login(form).then((res) => {
-    console.log(res);
-    let token = res.data;
-    console.log(token);
-    localStorage.setItem('token', token);
-  });
+  login(form)
+    .then((res) => {
+      console.log(res);
+      let token = res.data.data;
+      console.log(token);
+      localStorage.setItem('token', token);
+      router.push('/manage-thinking');
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 }
 </script>
 <template>
