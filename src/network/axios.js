@@ -6,14 +6,14 @@ export function handleClick() {
   return axios.get('/usermessage')
 }
 
-export function handleThinking(token){
+export function handleThinking(token, data){
   console.log("handleThinking now~~~");
   const config = {
     headers: {
       'Authorization': `Bearer ${token}` // This sets the Authorization header with the token
     }
   };
-  return axios.post('userthinking', null, config)
+  return axios.post('userthinking', data, config)
 }
 
 export function login(data){
