@@ -8,6 +8,9 @@
         <el-form-item label="summary">
           <el-input v-model="form.summary"></el-input>
         </el-form-item>
+        <el-form-item label="technology stack">
+          <Suggestion @update:tags="updateItems"></Suggestion>
+        </el-form-item>
         <el-form-item label="code">
           <el-input v-model="form.code" type="textarea"></el-input>
         </el-form-item>
@@ -27,7 +30,11 @@
 
 <script>
 import { handleThinking } from '../../network/axios';
+import Suggestion from '@/components/autofill.vue';
 export default {
+  components: {
+    Suggestion,
+  },
   data() {
     return {
       form: {
@@ -37,6 +44,7 @@ export default {
         summary: '',
         // tech: [],
       },
+      items: [],
     };
   },
   created() {
@@ -61,6 +69,11 @@ export default {
       if (!token) {
         this.$router.push('/login');
       }
+    },
+    updateItems(tags) {
+      this.items = tags; // 更新父组件的items数组
+      console.log(this.items);
+      console.log('----');
     },
   },
 };

@@ -20,3 +20,11 @@ export function login(data){
   console.log("login now~~~");
   return axios.post('login', data)
 }
+
+export function suggestion(query){
+  console.log("finding suggestions now~~");
+  let baseURL = 'startsWith';
+  let queryString = `?prefix=${encodeURIComponent(query)}`;
+  let fullURL = baseURL + queryString;
+  return axios.get(fullURL)
+}
