@@ -54,7 +54,7 @@ export default {
     onSubmit() {
       console.log('submit!');
       let token = localStorage.getItem('token');
-      handleThinking(token, this.form).then((res) => {
+      handleThinking(token, this.form, this.items).then((res) => {
         console.log('good');
         console.log(res);
       });
@@ -73,6 +73,7 @@ export default {
     updateItems(tags) {
       this.items = tags; // 更新父组件的items数组
       console.log(this.items);
+      console.log(typeof this.items);
       console.log('----');
     },
   },

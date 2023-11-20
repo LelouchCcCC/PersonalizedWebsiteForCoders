@@ -6,7 +6,7 @@
           v-model="state"
           class="inline-input"
           :fetch-suggestions="querySearch"
-          placeholder="please input the technology stack"
+          placeholder="input the technology stack"
           :trigger-on-focus="false"
           @select="handleSelect"></el-autocomplete>
       </el-col>
