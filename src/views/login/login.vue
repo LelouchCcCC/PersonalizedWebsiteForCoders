@@ -16,9 +16,22 @@ function userLogin(form) {
     .then((res) => {
       console.log(res);
       let token = res.data.data;
-      console.log(token);
-      localStorage.setItem('token', token);
-      router.push('/manage-thinking');
+      if (token) {
+        console.log(token);
+        localStorage.setItem('token', token);
+        router.push('/manage-thinking');
+        ElNotification({
+          title: 'Success',
+          message: 'Log in successfully',
+          type: 'success',
+        });
+      } else {
+        ElNotification({
+          title: 'Warning',
+          message: 'Wrong name or password',
+          type: 'warning',
+        });
+      }
     })
     .catch((error) => {
       console.log(error);

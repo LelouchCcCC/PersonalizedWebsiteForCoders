@@ -31,6 +31,7 @@
 <script>
 import { handleThinking } from '../../network/axios';
 import Suggestion from '@/components/autofill.vue';
+// import { ElMessage, ElNotification } from 'element-plus';
 export default {
   components: {
     Suggestion,
@@ -54,15 +55,25 @@ export default {
     onSubmit() {
       console.log('submit!');
       let token = localStorage.getItem('token');
-      handleThinking(token, this.form, this.items).then((res) => {
-        console.log('good');
-        console.log(res);
-      });
+      handleThinking(token, this.form, this.items)
+        .then((res) => {
+          console.log('good');
+          console.log(res);
+          ElMessage({ message: 'submit successfully', type: 'success' });
+        })
+        .catch(() => {
+          ElMessage({ message: 'submit sfailed', type: 'warning' });
+        });
     },
     logOut() {
       console.log('loggoingout~~~');
       localStorage.removeItem('token');
       this.$router.push('/login');
+      ElNotification({
+        title: 'Success',
+        message: 'Log out successfully',
+        type: 'success',
+      });
     },
     checkToken() {
       let token = localStorage.getItem('token');
