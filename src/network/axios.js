@@ -31,3 +31,9 @@ export function suggestion(query){
   let fullURL = baseURL + queryString;
   return axios.get(fullURL)
 }
+
+export function fetchthinking(name){
+  console.log("fetch thinking now~~");
+  let queryString = `userthinking?name=${name}`
+  return axios.get(queryString)
+}

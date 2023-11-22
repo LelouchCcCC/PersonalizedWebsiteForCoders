@@ -3,7 +3,9 @@
   <h1>{{ res }}</h1> -->
   <!-- <textme /> -->
   <div id="whole">
-    <navBar></navBar>
+    <div class="sticky-nav">
+      <navBar></navBar>
+    </div>
     <router-view></router-view>
     <!-- <content1></content1> -->
     <!-- <div class="left-bar">
@@ -88,6 +90,15 @@ import navBar from './nav-bar.vue';
   /* background: url('cool-background.png'); */
   /* background: linear-gradient(45deg, #34495e, #67809f); */
   background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  background-attachment: fixed;
+  overflow-y: auto;
+}
+
+.sticky-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 .main-content {
   height: 80px;

@@ -22,8 +22,9 @@ import direct from '@/components/common/direct.vue';
 <style>
 .nav {
   width: 100%;
-  height: 63px;
+  height: 70px;
   padding-top: 10px;
+  background-color: #cfc2ed;
 }
 .right-icon {
   float: right;
