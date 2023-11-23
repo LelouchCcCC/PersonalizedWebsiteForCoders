@@ -37,3 +37,9 @@ export function fetchthinking(name){
   let queryString = `userthinking?name=${name}`
   return axios.get(queryString)
 }
+
+export function fetchtech(thnking_id){
+  console.log("fetch tech now~~");
+  let queryString = `stacked?thinking_id=${thnking_id}`
+  return axios.get(queryString)
+}
