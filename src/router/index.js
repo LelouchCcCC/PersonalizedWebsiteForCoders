@@ -13,6 +13,10 @@ const routes = [
       component: ()=>import('@/views/home/content-1.vue')
     },
     {
+      path:'/resume',
+      component: ()=>import('@/views/resume/resume.vue'),
+    },
+    {
       path:'/thinking',
       component: ()=>import('@/views/thinking/thinking.vue'),
     },

@@ -1,24 +1,36 @@
 <template>
   <div class="co">
     <div class="neirong">
-      <el-form ref="form" label-position="top" :model="form" label-width="80px">
-        <el-form-item label="url link">
+      <el-form ref="form" label-position="top" :model="form" label-width="80px" :rules="rules">
+        <el-form-item label="url link" prop="url">
           <el-input v-model="form.url"></el-input>
         </el-form-item>
-        <el-form-item label="summary">
+        <el-form-item label="heading" prop="heading">
+          <el-input v-model="form.heading"></el-input>
+        </el-form-item>
+        <el-form-item label="summary" prop="summary">
           <el-input v-model="form.summary"></el-input>
         </el-form-item>
-        <el-form-item label="technology stack">
+        <el-form-item label="technology stack" arop="stack" style="float: left">
           <Suggestion @update:tags="updateItems"></Suggestion>
         </el-form-item>
-        <el-form-item label="code">
-          <el-input v-model="form.code" type="textarea"></el-input>
+        <el-form-item label=" leetcode No." prop="number" style="float: left">
+          <el-input v-model="form.number"></el-input>
         </el-form-item>
-        <el-form-item label="content">
-          <el-input v-model="form.content" type="textarea"></el-input>
+        <el-form-item label="technology stack" prop="lan" style="float: right">
+          <el-select v-model="form.lan" placeholder="please choose programme">
+            <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"> </el-option>
+          </el-select>
+        </el-form-item>
+        <div style="clear: both"></div>
+        <el-form-item label="code" prop="code">
+          <el-input v-model="form.code" type="textarea" size="large"></el-input>
+        </el-form-item>
+        <el-form-item label="content" prop="content">
+          <el-input v-model="form.content" type="textarea" size="large"></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="onSubmit">Submit</el-button>
+          <el-button type="primary" @click="submitForm(ruleFormRef)"> Submit </el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -38,14 +50,40 @@ export default {
   },
   data() {
     return {
+      rules: {
+        url: [{ required: true, message: 'Please input url', trigger: 'blur' }],
+        heading: [{ required: true, message: 'Please input heading', trigger: 'blur' }],
+        code: [{ required: true, message: 'Please enter code', trigger: 'blur' }],
+        lan: [{ required: true, message: 'Please choose programme', trigger: 'blur' }],
+        content: [{ required: true, message: 'Please input content', trigger: 'blur' }],
+        summary: [{ required: true, message: 'Please input summary', trigger: 'blur' }],
+        stack: [{ required: true, message: 'Please input the technology stack', trigger: 'blur' }],
+      },
       form: {
         url: '',
         content: '',
+        heading: '',
+        number: '',
         code: '',
+        lan: '',
         summary: '',
         // tech: [],
       },
       items: [],
+      options: [
+        {
+          value: 'python',
+          label: 'python',
+        },
+        {
+          value: 'java',
+          label: 'java',
+        },
+        {
+          value: 'javascript',
+          label: 'javascript',
+        },
+      ],
     };
   },
   created() {
@@ -64,6 +102,13 @@ export default {
         .catch(() => {
           ElMessage({ message: 'submit sfailed', type: 'warning' });
         });
+    },
+    submitForm() {
+      if (this.form.url == '' || this.form.code == '' || this.form.content == '' || this.form.heading == '' || this.form.lan == '' || this.form.number == '' || this.form.summary == '') {
+        ElMessage({ message: 'there is still blank', type: 'warning' });
+      } else {
+        this.onSubmit();
+      }
     },
     logOut() {
       console.log('loggoingout~~~');

@@ -40,12 +40,12 @@ let changePage3 = () => {
   page3.value = true;
   page4.value = false;
 };
-let changePage4 = () => {
-  page1.value = false;
-  page2.value = false;
-  page3.value = false;
-  page4.value = true;
-};
+// let changePage4 = () => {
+//   page1.value = false;
+//   page2.value = false;
+//   page3.value = false;
+//   page4.value = true;
+// };
 </script>
 <template>
   <transition v-show="page1" class="con_wrap" name="page-change">
@@ -223,7 +223,7 @@ let changePage4 = () => {
     <section @click="changePage1"><img v-show="!page1" src="blackRound.svg" alt="" /><img v-show="page1" src="orangeRound.svg" alt="" /></section>
     <section @click="changePage2"><img v-show="!page2" src="blackRound.svg" alt="" /><img v-show="page2" src="orangeRound.svg" alt="" /></section>
     <section @click="changePage3"><img v-show="!page3" src="blackRound.svg" alt="" /><img v-show="page3" src="orangeRound.svg" alt="" /></section>
-    <section @click="changePage4"><img v-show="!page4" src="blackRound.svg" alt="" /><img v-show="page4" src="orangeRound.svg" alt="" /></section>
+    <!-- <section @click="changePage4"><img v-show="!page4" src="blackRound.svg" alt="" /><img v-show="page4" src="orangeRound.svg" alt="" /></section> -->
   </div>
 </template>
 <style>
@@ -325,7 +325,7 @@ let changePage4 = () => {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  color: #fff;
+  /* color: #fff; */
 }
 .exCon p,
 .exCon ul {

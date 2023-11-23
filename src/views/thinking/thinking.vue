@@ -42,19 +42,23 @@ let canCopy = computed(() => {
       <el-timeline>
         <el-timeline-item v-for="think in data" :key="think.id" :timestamp="formattedDateTime(think.date)" placement="top" @click="showDetails(think.id)">
           <el-card style="cursor: pointer">
-            <h4>{{ think.summary }}</h4>
+            <h4>{{ think.heading }}</h4>
             <!-- <p>{{ formattedDateTime(think.date) }}</p> -->
           </el-card>
         </el-timeline-item>
       </el-timeline>
     </div>
     <div class="spl"></div>
+    <div v-if="display == -1" class="detail" style="text-align: center">select from left to get the details</div>
     <div v-if="display !== -1" class="detail">
       <div v-for="item in data" :key="item.id">
         <div v-if="item.id === display">
           <div style="height: 25px"></div>
-          <h1 style="font-size: 36px">{{ item.summary }}</h1>
-          <div style="margin: 25px 0; text-align: center"><a :href="item.url" target="_blank">leetcode link</a></div>
+          <h1 style="font-size: 36px; text-align: left; margin-bottom: 15px">{{ item.heading }}</h1>
+          <h3>{{ item.summary }}</h3>
+          <div style="margin: 25px 0">
+            <a :href="item.url" target="_blank">leetcode {{ item.number }}</a>
+          </div>
           <div class="tags">
             <el-tag v-for="tag in dt" :key="tag" type="success" class="tag_detail">{{ tag }}</el-tag>
           </div>
@@ -67,11 +71,13 @@ let canCopy = computed(() => {
               <!-- <div>
                 <button v-copy="text">copy</button>
               </div> -->
-              <highlightjs language="java" :code="item.code" @mouseenter="canCopy()" @mouseleave="canCopy()" />
+              <highlightjs :language="item.lan" :code="item.code" @mouseenter="canCopy()" @mouseleave="canCopy()" />
             </div>
           </div>
           <div class="content2">
-            {{ item.content }}
+            <div style="white-space: pre-wrap">
+              {{ item.content }}
+            </div>
           </div>
         </div>
       </div>
@@ -106,10 +112,10 @@ let canCopy = computed(() => {
 
 .detail {
   float: left;
-  width: calc(100% - 522px);
+  width: calc(100% - 442px);
   height: calc(100vh - 85px);
   overflow-y: auto;
-  margin-left: 100px;
+  padding-left: 100px;
 }
 
 .detail button {
@@ -161,6 +167,7 @@ code {
 
 .tag_detail {
   margin-right: 20px;
+  font-size: 16px;
 }
 
 .tags {

@@ -10,8 +10,11 @@ import 'highlight.js/styles/atom-one-dark.css'
 import hljs from 'highlight.js/lib/core';
 import python from 'highlight.js/lib/languages/python';
 import java from 'highlight.js/lib/languages/java';
+import javascript from 'highlight.js/lib/languages/javascript';
 import hljsVuePlugin from "@highlightjs/vue-plugin";
+
 hljs.registerLanguage('python', python);
+hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('java', java);
 // import ElementPlus from 'element-plus'
 const app = createApp(App)
