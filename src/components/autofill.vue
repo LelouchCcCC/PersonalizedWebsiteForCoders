@@ -12,7 +12,7 @@
       </el-col>
     </el-row>
     <div class="im">
-      <img src="@/img/remove.photos-removed-background (1).png" alt="" @click="add()" />
+      <img src="@/img/addd.png" alt="" @click="add()" />
     </div>
     <div>
       <el-tag v-for="tag in tags" :key="tag" closable type="success" :disable-transitions="false" @close="handleClose(tag)">

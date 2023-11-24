@@ -19,7 +19,7 @@ hljs.registerLanguage('java', java);
 // import ElementPlus from 'element-plus'
 const app = createApp(App)
 
-axios.defaults.baseURL='http://localhost:8080'
+axios.defaults.baseURL='http://3.145.41.191:8080'
 app.config.globalProperties.$http = axios
 app.config.globalProperties.$message = ElMessage;
 app.use(router)

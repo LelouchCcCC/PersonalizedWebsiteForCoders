@@ -54,8 +54,8 @@ let changePage3 = () => {
         <h1 style="font-weight: bold">Basic Information</h1>
         <div class="scissors" style="border-top: 1px dashed orange"></div>
         <h2>
-          &nbsp;&nbsp;&nbsp;&nbsp;A graduate student at Northeastern University, with a strong command of Python and its web frameworks, Django and Flask. While my Java skills may be a work in
-          progress, I'm dedicated to continuous learning and strive to maintain an unwavering passion for acquiring new knowledge.
+          &nbsp;&nbsp;&nbsp;&nbsp;A graduate student at Northeastern University, with a strong command of Python and its web frameworks, Django and Flask.I am proficient in both front-end and
+          back-end(Java Pyhon) development. I'm dedicated to continuous learning and strive to maintain an unwavering passion for acquiring new knowledge.
         </h2>
       </div>
       <div class="myinfo">
@@ -220,9 +220,9 @@ let changePage3 = () => {
     <a class="scroll"><span></span></a>
   </div> -->
   <div class="fix-right">
-    <section @click="changePage1"><img v-show="!page1" src="blackRound.svg" alt="" /><img v-show="page1" src="orangeRound.svg" alt="" /></section>
-    <section @click="changePage2"><img v-show="!page2" src="blackRound.svg" alt="" /><img v-show="page2" src="orangeRound.svg" alt="" /></section>
-    <section @click="changePage3"><img v-show="!page3" src="blackRound.svg" alt="" /><img v-show="page3" src="orangeRound.svg" alt="" /></section>
+    <section @click="changePage1"><img v-show="!page1" src="@/img/c1.png" alt="" /><img v-show="page1" src="@/img/c2.png" alt="" /></section>
+    <section @click="changePage2"><img v-show="!page2" src="@/img/c1.png" alt="" /><img v-show="page2" src="@/img/c2.png" alt="" /></section>
+    <section @click="changePage3"><img v-show="!page3" src="@/img/c1.png" alt="" /><img v-show="page3" src="@/img/c2.png" alt="" /></section>
     <!-- <section @click="changePage4"><img v-show="!page4" src="blackRound.svg" alt="" /><img v-show="page4" src="orangeRound.svg" alt="" /></section> -->
   </div>
 </template>

@@ -39,7 +39,7 @@ let canCopy = computed(() => {
 <template>
   <div style="margin-top: 15px">
     <div class="block">
-      <el-timeline>
+      <el-timeline reverse="false">
         <el-timeline-item v-for="think in data" :key="think.id" :timestamp="formattedDateTime(think.date)" placement="top" @click="showDetails(think.id)">
           <el-card style="cursor: pointer">
             <h4>{{ think.heading }}</h4>

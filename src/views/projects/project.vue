@@ -7,13 +7,13 @@
       </div>
       <div v-if="project.img.length" class="carousel-container">
         <div class="left-icon" @click="leftSlid(project)">
-          <img src="double-left.svg" alt="" />
+          <img src="@/img/left.png" alt="" />
         </div>
         <div class="carousel-images">
           <img v-for="(image, index) in project.img" :key="index" :src="image.src" :alt="image.alt" :style="{ display: index === project.currentSlide ? 'block' : 'none' }" />
         </div>
         <div class="right-icon" @click="rightSlid(project)">
-          <img src="double-right.svg" alt="" />
+          <img src="@/img/right.png" alt="" />
         </div>
       </div>
       <div class="tech">
@@ -40,7 +40,7 @@ export default {
         {
           title: 'E-Cafeteria Management System',
           date: '10/2022-04/2023',
-          img: [{ src: 'src/img/can1.png' }, { src: 'src/img/can2.png' }, { src: 'src/img/can3.png' }, { src: 'src/img/can4.png' }],
+          img: [{ src: 'canteen1.jpg' }, { src: 'can1.png' }, { src: 'can2.png' }, { src: 'can3.png' }, { src: 'can4.png' }],
           currentSlide: 0,
           showDetails: false,
           technicUsed: ['Python', 'Yolov5', 'Vue', 'Echarts', 'HTML+CSS', 'JavaScript', 'MySQL', 'Linux'],
@@ -56,14 +56,7 @@ export default {
           date: '02/2022-12/2022',
           showDetails: false,
           technicUsed: ['Python', 'Flask', 'Algorithm', 'Vue', 'HTML+CSS', 'JavaScript', 'MySQL', 'K-means', 'Big Data'],
-          img: [
-            { src: 'src/img/suyuan1.png' },
-            { src: 'src/img/suyuan2.png' },
-            { src: 'src/img/suyuan3.png' },
-            { src: 'src/img/suyuan4.png' },
-            { src: 'src/img/suyuan5.png' },
-            { src: 'src/img/suyuan6.png' },
-          ],
+          img: [{ src: 'suyuan1.png' }, { src: 'suyuan2.png' }, { src: 'suyuan3.png' }, { src: 'suyuan4.png' }, { src: 'suyuan5.png' }, { src: 'suyuan6.png' }],
           currentSlide: 0,
           details: [
             'Designed the page lay out to increase user experience when using different facilities by modifying Element UI',
