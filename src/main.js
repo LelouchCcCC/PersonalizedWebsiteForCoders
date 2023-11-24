@@ -13,13 +13,16 @@ import java from 'highlight.js/lib/languages/java';
 import javascript from 'highlight.js/lib/languages/javascript';
 import hljsVuePlugin from "@highlightjs/vue-plugin";
 
+// import baseURL from '@/network/axios_config.js'
+
+
 hljs.registerLanguage('python', python);
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('java', java);
 // import ElementPlus from 'element-plus'
 const app = createApp(App)
 
-axios.defaults.baseURL='http://3.145.41.191:8080'
+axios.defaults.baseURL=import.meta.env.VITE_APP_API_HOST
 app.config.globalProperties.$http = axios
 app.config.globalProperties.$message = ElMessage;
 app.use(router)

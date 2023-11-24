@@ -113,6 +113,7 @@ export default {
     logOut() {
       console.log('loggoingout~~~');
       localStorage.removeItem('token');
+      console.log('当前环境:', process.env.NODE_ENV);
       this.$router.push('/login');
       ElNotification({
         title: 'Success',
