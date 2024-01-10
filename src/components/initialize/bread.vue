@@ -31,10 +31,10 @@ import dashedThin from '@/components/common/dashed-thin.vue';
         >
       </div>
       <div>
-        <direct class="lin" style="min-width: 160px; margin-left: 10px"><router-link to="information">MyHome</router-link></direct>
-        <direct class="lin" style="min-width: 160px; margin-left: 10px"><a href="https://github.com/LelouchCcCC">GitHub</a></direct>
-        <direct class="lin" style="min-width: 160px; margin-left: 10px"><a href="https://www.linkedin.com/in/yuhan-zhang-05896a286/">LinedIn</a></direct>
-        <direct class="lin" style="min-width: 160px; margin-left: 10px"><a href="https://leetcode.cn/u/elastic-kovvalevskismn/">LeetCode</a></direct>
+        <router-link to="information"><direct class="lin" style="min-width: 160px; margin-left: 10px">MyHome</direct></router-link>
+        <a href="https://github.com/LelouchCcCC"><direct class="lin" style="min-width: 160px; margin-left: 10px">GitHub</direct></a>
+        <a href="https://www.linkedin.com/in/yuhan-zhang-05896a286/"><direct class="lin" style="min-width: 160px; margin-left: 10px">LinedIn</direct></a>
+        <a href="https://leetcode.cn/u/elastic-kovvalevskismn/"><direct class="lin" style="min-width: 160px; margin-left: 10px">LeetCode</direct></a>
       </div>
     </div>
   </div>
@@ -42,14 +42,17 @@ import dashedThin from '@/components/common/dashed-thin.vue';
 
 <style>
 #bread-box {
+  position: relative;
   width: 1057px;
   height: 600px;
-  background-color: #375462;
-  opacity: 0.6;
+  background-color: #f39a5f;
+  /* opacity: 0.6; */
   border-radius: 5%;
 }
 
 #first-img {
+  position: relative;
+  left: -2px;
   float: left;
   width: 357px;
   height: 600px;
@@ -66,7 +69,8 @@ import dashedThin from '@/components/common/dashed-thin.vue';
   float: left;
   width: 700px;
   height: 100%;
-  background-color: #375462;
+  background-color: #f39a5f;
+  opacity: 0.9;
   border-radius: 0 6% 6% 0;
 }
 

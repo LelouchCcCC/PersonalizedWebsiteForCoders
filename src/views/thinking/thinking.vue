@@ -10,9 +10,10 @@ let display = ref(-1);
 //   const date = new Date(dateString);
 //   return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
 // };
-const generateLineNumbers = (code) => {
-  return code.split('\n').map((_, index) => index + 1);
-};
+
+// const generateLineNumbers = (code) => {
+//   return code.split('\n').map((_, index) => index + 1);
+// };
 
 const formattedDateTime = (dateString) => {
   let date = new Date(dateString);
@@ -31,10 +32,10 @@ const showDetails = (id) => {
     dt.value = res.data;
   });
 };
-let isCopy = ref(false);
-let canCopy = computed(() => {
-  isCopy.value = !isCopy.value;
-});
+// let isCopy = ref(false);
+// let canCopy = computed(() => {
+//   isCopy.value = !isCopy.value;
+// });
 </script>
 <template>
   <div style="margin-top: 15px">
@@ -63,15 +64,16 @@ let canCopy = computed(() => {
             <el-tag v-for="tag in dt" :key="tag" type="success" class="tag_detail">{{ tag }}</el-tag>
           </div>
           <div class="code-with-lines">
-            <div class="line-numbers">
+            <!-- <div class="line-numbers">
               <span v-for="lineNumber in generateLineNumbers(item.code)" :key="lineNumber" class="line-number">{{ lineNumber }}</span>
-            </div>
+            </div> -->
 
             <div class="codd">
               <!-- <div>
                 <button v-copy="text">copy</button>
               </div> -->
-              <highlightjs :language="item.lan" :code="item.code" @mouseenter="canCopy()" @mouseleave="canCopy()" />
+              <!-- <highlightjs :language="item.lan" :code="item.code" @mouseenter="canCopy()" @mouseleave="canCopy()" /> -->
+              <highlightjs :language="item.lan" :code="item.code" />
             </div>
           </div>
           <div class="content2">

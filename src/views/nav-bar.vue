@@ -3,10 +3,10 @@ import direct from '@/components/common/direct.vue';
 </script>
 <template>
   <div class="nav">
-    <direct style="min-width: 160px; margin-left: 10px"><router-link to="information">MyHome</router-link></direct>
-    <direct style="min-width: 160px; margin-left: 10px"><router-link to="project">Projects</router-link></direct>
-    <direct style="min-width: 160px; margin-left: 10px"><router-link to="thinking">Thinking</router-link></direct>
-    <direct style="min-width: 160px; margin-left: 10px"><router-link to="resume">Resume</router-link></direct>
+    <router-link to="information"><direct style="min-width: 160px; margin-left: 10px">MyHome</direct></router-link>
+    <router-link to="project"><direct style="min-width: 160px; margin-left: 10px">Projects</direct></router-link>
+    <router-link to="thinking"><direct style="min-width: 160px; margin-left: 10px">Thinking</direct></router-link>
+    <router-link to="resume"><direct style="min-width: 160px; margin-left: 10px">Resume</direct></router-link>
     <div class="right-icon">
       <a href="https://www.linkedin.com/in/yuhan-zhang-05896a286/"><img style="height: 100%; display: inline; margin-right: 20px" src="@/img/linkedin-logo.png" alt="" /></a>
     </div>
