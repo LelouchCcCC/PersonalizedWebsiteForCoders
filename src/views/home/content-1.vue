@@ -59,12 +59,12 @@ let changePage3 = () => {
         </h2>
       </div>
       <div class="myinfo">
-        <table>
+        <div rowspan="6" class="ex" :style="imageStyle">
+          <img class="round-pic" src="@/img/myPhoto-modified.png" />
+        </div>
+        <table class="ex2">
           <tbody>
             <tr>
-              <td rowspan="6" class="ex" :style="imageStyle">
-                <img class="round-pic" src="@/img/myPhoto-modified.png" />
-              </td>
               <td class="odd">Name | Yuhan Zhang</td>
               <td class="even">Phone | (617)936-9736</td>
             </tr>
@@ -312,6 +312,22 @@ let changePage3 = () => {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15px;
+}
+
+.ex {
+  float: left;
+}
+
+.ex2 {
+  float: left;
+}
+
+.ex2 tr {
+  height: 80px;
+}
+
+.ex2 tr td {
+  margin-right: 50px;
 }
 
 .ll {

@@ -13,14 +13,16 @@
   box-sizing: border-box; // 设置之后padding和border的值就不会影响盒子大小(元素的宽高)，相当于把padding和border的值都算在content里
 }
 
-a { TEXT-DECORATION:none }
+a {
+  text-decoration: none;
+}
 
 #app,
 html,
 body {
   height: 100%; // 页面满屏
   // overflow: hidden;
-  font-family: cursive;
-  // 'Patrick Hand SC', 
+  // font-family: cursive;
+  // 'Patrick Hand SC',
   font-size: large;
 }
