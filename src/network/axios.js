@@ -48,3 +48,7 @@ export function fetchtech(thnking_id) {
   let queryString = `stacked?thinking_id=${thnking_id}`;
   return axios.get(queryString);
 }
+
+export function fetchLast5Next5Development() {
+  return axios.get('last5next5dvlp');
+}

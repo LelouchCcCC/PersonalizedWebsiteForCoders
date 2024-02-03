@@ -1,10 +1,37 @@
 <script setup>
 import { ref } from 'vue';
-let item = ref(['item1', 'item2', 'item3']);
+import { fetchLast5Next5Development } from '../../network/axios';
+let item = ref(['Added more language options for submitting code', 'Implemented the dialog when entered the website, which updates every day']);
+let item_plan = ref(['Implement responsive Web design']);
 let openAlert = ref(!(localStorage.getItem('TopAlert') && new Date().getTime() < localStorage.getItem('TopAlert')));
-console.log(localStorage.getItem('TopAlert'));
-console.log(new Date().getTime());
+let loading_last5next5 = ref(true);
+let error_message = ref('');
 console.log(openAlert.value);
+function FL5N5D() {
+  fetchLast5Next5Development()
+    .then((res) => {
+      item.value = res.data.last;
+      item_plan.value = res.data.next;
+      console.log('success');
+    })
+    .catch((error) => {
+      error_message.value = 'Failed to fetch the development log';
+      console.log(error);
+      ElNotification({
+        title: 'Error',
+        message: error_message,
+        type: 'error',
+      });
+    })
+    .finally(() => {
+      loading_last5next5.value = false;
+    });
+  console.log('------------');
+}
+if (openAlert.value === true) {
+  FL5N5D();
+}
+
 let saveToLocalSession = () => {
   let expirationTopAlert = new Date().getTime() + 1 * 30 * 1000;
   localStorage.setItem('TopAlert', expirationTopAlert);
@@ -14,18 +41,17 @@ let saveToLocalSession = () => {
 </script>
 
 <template>
-  <div v-show="openAlert">
-    <el-card class="box-card">
-      <template #header>
-        <div class="card-header">
-          <span>This is much more than a website</span>
-        </div>
-      </template>
+  <div>
+    <el-dialog v-model="openAlert" v-loading="loading_last5next5" :before-close="saveToLocalSession" width="800" center="true">
+      <template #header> This is more than my website </template>
+      <h3>Last Week development log</h3>
+      <br />
       <div v-for="o in item" :key="o" class="text item">{{ o }}</div>
-      <template #footer>
-        <el-button @click="saveToLocalSession">continue</el-button>
-      </template>
-    </el-card>
+      <br />
+      <h3>This Week planned</h3>
+      <br />
+      <div v-for="o in item_plan" :key="o" class="text item">{{ o }}</div>
+    </el-dialog>
   </div>
 </template>
 
