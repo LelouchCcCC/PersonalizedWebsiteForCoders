@@ -10,7 +10,7 @@
   "dependencies": {
     "@highlightjs/vue-plugin": "github:highlightjs/vue-plugin",
     "axios": "^1.5.1",
-    "element-plus": "^2.4.0",
+    "element-plus": "^2.4.3",
     "font-awesome": "^4.7.0",
     "highlight.js": "^11.9.0",
     "qs": "^6.11.2",
